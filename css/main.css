@@ -1,0 +1,344 @@
+
+
+body{
+    width:100%;
+    background-color:white;
+
+}
+
+.container{
+    width:1200px;
+    margin:0 auto;
+    background-color: white;
+}
+
+h2{
+    font-family: 'Caveat', cursive;
+}
+
+/* nav    */
+nav{
+    font-size: 21px;
+    color:black
+}
+nav img{
+    float:left;
+    
+}
+.header-wrapper{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ドロップダウン */
+/****メニュー全体****/
+#menu{
+	/*配置*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 100;
+}
+
+/****メニュー開閉ボタン****/
+#menu div{
+	/*デザイン*/
+	width: 30px;
+	height: 30px;
+	background: rgba(200,200,200,1);
+	/*配置*/
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#menu .menuopen{
+	/*デザイン*/
+	color: rgba(255,255,255,1);
+	font-size: 20px;
+	/*配置*/
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	pointer-events: auto;
+}
+
+#menu .menuclose{
+	/*デザイン*/
+	color: rgba(255,255,255,1);
+	font-size: 20px;
+	/*配置*/
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	pointer-events: auto;
+}
+
+/****メニュー一覧****/
+#menu ul{
+	/*アニメーション*/
+	-webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	/*デザイン*/
+	background: rgba(200,200,200,1);
+	width: 80%;
+	/*配置*/
+	position: absolute;
+	top: 30px;/*#menu divの高さ*/
+	right: -80%;/*#menu ul(メニュー一覧)の幅*/
+}
+
+#menu li{
+	/*デザイン*/
+	padding: 10px;
+	color: rgba(0,0,0,1);
+	border-bottom: 1px rgba(255,255,255,1) solid;
+	/*配置*/
+	pointer-events: auto;
+}
+
+/****メニューオープン時****/
+#menu:target .menuopen{
+	/*配置*/
+	display: none;
+}
+
+#menu:target .menuclose{
+	/*配置*/
+	display: block;
+}
+
+#menu:target ul{
+	/*配置*/
+	right: 0;
+}
+
+.list{
+    margin:50px 0;
+    
+}
+nav ul{
+   display: flex;
+   text-align:center;
+}
+
+/* 余白もクリックできるようにしたかったけどできなかった */
+nav li{
+    display: inline;
+    padding:50px 25px 50px 25px;    
+    font-size:21px;
+    
+}
+
+
+
+
+nav a{
+    text-decoration:none;
+    color:black;
+    transition: color 0.3s;
+    
+}
+
+
+nav a:hover{
+    color:blue;
+}
+
+/* title */
+
+.title{
+
+    
+    
+    color:white;
+    text-align: center;
+}
+.title h1{
+font-size: 50px;
+margin: 0 0 30px;
+font-weight: bold;
+
+}
+.title h2{
+    font-size: 40px;
+    
+}
+
+.topimg img{
+    text-align: center;
+    width: 100%;
+    margin-left:200px ;
+}
+
+/* 日程・結果 */
+
+.about_date{
+    text-align: center;
+    padding: 60px 0px ;
+    font-family: serif;
+}
+.about_date h2{
+    font-size: 24px;
+    padding-bottom: 30px;
+    font-family: 'Caveat', cursive;
+}
+.about_date_detail li{
+    list-style: none;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.news_more {
+    text-align: center;
+    margin: 60px  0 ;
+
+}
+
+.button:active{
+  
+    transform: translateY(4px);/*下に動く*/
+    border-bottom: none;/*線を消す*/
+  
+  }
+
+
+
+/* course */
+.sns{
+    text-align: center;
+}
+
+
+
+
+/* access */
+.access_wrapper{
+    margin: 60px 0;
+    text-align: center;
+}
+.access_title h2{
+    font-size: 24px;
+    font-weight: bold;
+    margin:0 0 30px;
+}
+.access_title p{
+    margin:0 0 60px;
+}
+.access_title iframe{
+    margin:0 0 60px;
+}
+
+.access_inf {
+    display:flex;
+    padding-bottom: 30px;
+
+    
+}
+
+/* dtのみを右にずらしたい。dtにpaddingやmarginをかけるとddまでずれてしまう */
+.access_inf dt{
+   width:50%;
+   
+
+}
+
+.access_inf dd{
+   width:50%;
+   text-align:left;
+}
+
+/* 中澤クイズ */
+.quiz-title{
+   text-align: center;
+}
+.quiz-wrapper{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.quiz1{
+    display: flex;
+   justify-content: left;
+   margin-left:450px;
+}
+
+.quizsubmit{
+    
+        background-color: #ffd61a;
+        color:white;
+        font-size:18px;
+        width:300px;
+        height:60px;
+        font-size: 18px;
+        box-shadow: 3px 3px 0 grey;
+        text-decoration:none;
+        border-radius:4px;
+        border:none;
+        margin-top: 60px;
+        
+    
+
+}
+
+
+/* おまけ */
+
+.game_wrapper{
+    text-align: center;
+}
+
+.game_wrapper h2{
+    font-size: 24px;
+    font-weight: bold;
+    margin:0 0 30px;
+}
+.game_wrapper p{
+    margin:0 0 60px;
+
+}
+
+.game_exp{
+    margin:0 0 30px;
+    line-height: 30px;
+}
+
+.go_to_janken{
+    width:1200px;
+    text-align: center;
+    
+}
+
+.go_to_janken a{
+    background-color: skyblue;
+    color:black;
+    font-size:18px;
+    width:300px;
+    height:100px;
+    font-size: 18px;
+    box-shadow: 3px 3px 0 grey;
+    text-decoration:none;
+    border-radius:4px;
+    border:none;
+}
+
+.janken_logo{
+    text-align: center;
+    margin:0 0 100px;
+    
+
+}
